@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/bff1749783.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Generasor de memes</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 class="title">Generador de Memes</h1>
-        <div class="container-buttons">
-            <button class="button button-text" id="img-button">
-                <i></i> Imagen
-            </button>
-            <button class="button button-text" id="text-button">
-                <i></i>
-                Texto
-            </button>
-            <button class="button button-text" id="dark-button">
-                <i></i>
-                Modo Oscuro
-            </button>
+      <h1 class="title">Generador de Memes</h1>
+      <div class="container-buttons">
+        <button class="button button-text" id="img-button">
+          <i class="fa-regular fa-image" style="color: #ffffff"></i> Imagen
+        </button>
+        <button class="button button-text" id="text-button">
+          <i class="fa-solid fa-font" style="color: #ffffff"></i>
+          Texto
+        </button>
+        <button class="button button-text" id="dark-button">
+          <i class="fa-regular fa-lightbulb" style="color: #ffffff"></i>
+          Modo Oscuro
+        </button>
 
-            <!-- <button class="button button-text" id="light-button">
+        <!-- <button class="button button-text" id="light-button">
                 <i></i>
                 Modo Claro
             </button> -->
-        </div>
+      </div>
     </header>
-</body>
+    <main>
+      <div class="container-memes">
+        <div class="canvas-meme">
+          <p>TOP TEXT</p>
+          <div class="image-meme"></div>
+          <p>BOTTOM TEXT</p>
+        </div>
+
+        <button
+          type="button"
+          class="button button-download"
+          id="download-button">
+          <i class="fas fa-download button-icon-text"></i>
+          Descargar meme
+        </button>
+      </div>
+    </main>
+    <aside></aside>
+  </body>
 </html>
