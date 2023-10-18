@@ -1,3 +1,9 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -12,17 +18,110 @@ body {
 }
 
 header {
-    
+    font-family: 'Open Sans', sans-serif;
     width: 100vw;
+    padding: 1%;
     background-color: #191e2b;
     text-align: center;
     color: white;
 }
-
+h1{
+    margin: 10px;
+}
 .container-buttons{
     height: 36px;
     justify-content: center;
     align-items: center;
 }
+i{
+    font-size: 16px;
+}
+button{
+    height: 36px;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #191e2b;
+    color: white;
+}
 
+main{
+    height: 100vh;
+    background-color: #30343f;
+    display: flex;
+    flex-direction: column;
+}
 
+.container-meme {
+    width: 50%;
+    height: 60%;
+    margin: 20px auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    
+.canvas-meme {
+    width: 60%;
+    height: 100%;
+}
+
+p{
+    width: 100%;
+    font-family: Impact;
+    font-size: 35px;
+    /* padding: 14px, 50px; */
+    background-color: white;
+    text-align: center;
+}
+
+.image-meme{
+
+    height: 90%;
+    background-color: blue;
+
+}
+
+.button-download{
+    width: 20%;
+    margin: 20px auto; 
+    margin-top: 80px;
+    justify-content: center;;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 16px;
+    border: none;
+    background-color: green;
+    color: white;
+    
+
+}
+aside {
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #252935; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover {
+    background-color:#30343f; 
+    color:white; 
+    transform: scale(1.1); 
+    border-radius: 5%;
+}
+.button-download:hover {
+    background-color: rgb(12, 78, 12); 
+    color:white; 
+    transform: scale(1.1); 
+    border-radius: 5%;
+
+}

@@ -33,13 +33,13 @@
       </div>
     </header>
     <main>
-      <div class="container-memes">
+      <div class="container-meme">
         <div class="canvas-meme">
           <p>TOP TEXT</p>
           <div class="image-meme"></div>
           <p>BOTTOM TEXT</p>
         </div>
-
+      </div>
         <button
           type="button"
           class="button button-download"
@@ -47,8 +47,47 @@
           <i class="fas fa-download button-icon-text"></i>
           Descargar meme
         </button>
-      </div>
     </main>
-    <aside></aside>
+
+        <!-- ASIDE IMAGE -->
+
+    <aside class="aside-image"> 
+        <button class="aside-close-button" id = "aside-close-button">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <section class="section-panel-image">
+            <h2>IMAGEN</h2>
+            <div class="url-image">
+                <h3>URL</h3>
+                <input type="text"> 
+            </div>
+
+            <div class="fondo-image">
+                <h3>FONDO</h3>
+                <div class="fondo-image-panel">
+                    <input type="color" value="#ffffff">
+                    <span></span>
+                </div>
+
+                <div class="fondo-image-panel">
+                    <select name="" id="">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </div>
+
+            </div>
+            
+            
+
+        </section>
+        
+
+    </aside>
   </body>
 </html>
