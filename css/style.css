@@ -9,7 +9,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body.dark-theme {
+    --color-header: #191e2b;
+    --color-background: #30343f;
+    --color-panel: #252935;
+  
+    --color-boton-default: #393e49;
+    --color-boton-default-hover: #4e5565;
+  
+    --color-text: #ffffff;
+  
+    --font-primary: 'Open Sans', sans-serif;
+  
+    --border-radius: 3px;
+  }
+  
 body {
     width: 100vw;
     height: 100vh;
@@ -21,7 +35,7 @@ header {
     font-family: 'Open Sans', sans-serif;
     width: 100vw;
     padding: 1%;
-    background-color: #191e2b;
+    background-color: var(--color-header);
     text-align: center;
     color: white;
 }
@@ -122,7 +136,7 @@ p{
     z-index: 10;
 }
 
-.section-panel-image {
+.section-panel{
     padding: 20px;
 }
 
@@ -142,9 +156,7 @@ input[type="range"] {
     border-radius: 3px;
     cursor: pointer;
 }
-.fondo-image panel{
-    gap: 10px;
-}
+
 .fondo-centrar{
     display: flex;
     justify-content: space-between;
@@ -152,9 +164,13 @@ input[type="range"] {
     align-items: center;
     width: 100%; 
 }
+.aside-input-color{
+    width: 50%;
+}
 
+/* 
 
-fondo-row input[type="color"],
+fondo-row input[type="color" ],
 .fondo-row select {
     position: relative;
     height: 36px;
@@ -170,74 +186,13 @@ span{
     color: #191e2b;
     margin-left: -50px; 
 }
-
+ .input-color.prefix{
+    prefix: 50%;
+ } */
 h3{
     font-size: 0.7rem;
 }
 
-
-
-
-
-/* aside {
-    width: 15%;
-    height: 100vh;
-    padding: 30px 15px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #252935; 
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-
-
-}
-
-h
-.aside-image{
-    margin-top: 0;
-  margin-bottom: 20px;
-   width: 100%; 
-  font-size: 18px;
-  text-align: center;
-}
-
-.aside-close-button{
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.aside-tittle{
-    color: var(--color-title-control); 
-    margin-bottom: 8px;
-    width: 100%;
-    font-size: 1rem;
-    margin-top: 0;
-}
-input, select{
-    width: 35%;
-
-}
-.fondo-image-panel{
-     margin-bottom: 20px; 
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
 
 
 .button:hover {
@@ -252,4 +207,4 @@ input, select{
     transform: scale(1.1); 
     border-radius: 5%;
 
-} */
+} 

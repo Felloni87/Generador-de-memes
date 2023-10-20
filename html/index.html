@@ -11,7 +11,7 @@
     <title>Generasor de memes</title>
   </head>
 
-  <body>
+  <body class="dark-theme">
     <header>
       <h1 class="title">Generador de Memes</h1>
       <div class="container-buttons">
@@ -22,7 +22,7 @@
           <i class="fa-solid fa-font" style="color: #ffffff"></i>
           Texto
         </button>
-        <button class="button button-text" id="dark-button">
+        <button class="button button-text button-theme-dark" id="dark-button">
           <i class="fa-regular fa-lightbulb" style="color: #ffffff"></i>
           Modo Oscuro
         </button>
@@ -57,7 +57,7 @@
             <i class="fas fa-times"></i>
         </button>
 
-        <section class="section-panel-image">
+        <section class="section-panel">
             <h2 class="aside-tittle">IMAGEN</h2>
             <div class="url-image">
                 <h3>URL</h3>
@@ -67,8 +67,8 @@
             <div class="fondo-image">
                 <h3>FONDO</h3>
             <div class="fondo-centrar">    
-                <div class="fondo-image-panel">
-                    <input class="fondo-row"  type="color" value="#ffffff">
+                <div class="aside-input-color">
+                    <input class="input-color"  type="color" value="#ffffff">
                     <span>#ffffff</span>
                 </div>
 
@@ -129,7 +129,113 @@
           <button class="button" id="default-filters-button">Reestablecer filtros</button>
         </section>
         
+        <!-- aside Texto -->
 
+        <section class="section-panel">
+            <section class="">
+            <h2 class="aside-tittle">TEXTO</h2>
+            <div class="aside-container">
+                <h3>SUPERIOR</h3>
+                <Textarea>TOP TEXT</Textarea>
+                <div>
+                    <input type="checkbox">
+                    <label for="">Sin texto superior</label>
+                </div>
+            </div>
+            <div class="aside-container">
+                <h3>INFERIOR</h3>
+                <Textarea>BOTTOM TEXT</Textarea>
+                <div>
+                    <input type="checkbox">
+                    <label for="">Sin texto inferior</label>
+                </div>
+            </div>
+                  <!-- FUENTE -->
+            
+            <div class="aside-container">
+                <h3>FUENTE</h3>
+                <select name="family-fonts" id="" class="">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="American Typewrite">American Typewrite</option>
+                    <option value="Andale Mono">Andale Mono</option>
+                    <option value="Comics Sans Ms">Comics Sans Ms</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <div class="aside-flex">
+                    <!-- Tamaño -->
+                    <input type="number" class="">
+                    <!-- Alineacion -->
+                    <div class="buttons-alignment">
+                        <button class="balignment">
+                            <i></i>
+                        </button>
+                        <button class="balignment">
+                            <i></i>
+                        </button>
+                        <button class="balignment">
+                            <i></i>
+                        </button>
+                    </div>    
+                </div>
+            </div>   
+            
+            <!-- Color -->
+           <div class="aside-container">
+            <div class="aside-flex">
+                <!-- Color Texto -->
+                <div>
+                    <h3>COLOR</h3>
+                    <div>
+                        <input type="color" name="" id="">
+                        <span>#000000</span>
+                    </div>
+                </div>
+             <!-- Color Fondo -->
+                <div class="aside-container">
+                    <h3>FONDO</h3>
+                    <div>
+                        <input type="color">
+                        <span>#ffffff</span>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-flex">
+                <input type="checkbox">
+                <label for="">Fondo transparente</label>
+            </div>
+           </div> 
+           <!-- Contorno -->
+            <div class="aside-container">
+                <h3>CONTORNO</h3>
+                <div class="buttons-flex">
+                    <button>Ninguno</button>
+                    <button>Claro</button>
+                    <button>Oscuro</button>
+                </div>
+            </div>
+            <!-- Padding -->
+            <div class="aside-container">
+                <h3>ESPACIADO</h3>
+                <input type="number">
+            </div>
+            <!-- Alto delinea -->
+            <div class="aside-container">
+                <h3>INTERLINEADO</h3>
+                <select name="" id="">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+            </div>
+        </section>
     </aside>
+    <script src="/js/main.js"></script>
   </body>
 </html>
