@@ -1,29 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body.dark-theme {
     --color-header: #191e2b;
     --color-background: #30343f;
     --color-panel: #252935;
-  
     --color-boton-default: #393e49;
     --color-boton-default-hover: #4e5565;
-  
     --color-text: #ffffff;
-  
     --font-primary: 'Open Sans', sans-serif;
-  
     --border-radius: 3px;
-  }
-  
+}
+
+body.light-theme {
+    --color-header: #e0e0e0;
+    --color-background: #eeeeee;
+    --color-panel: #fafafa;
+    --color-boton-default: #e0e0e0;
+    --color-boton-default-hover: #bdbdbd;
+    --color-text: #424242;
+    --color-title-panel: rgba(33, 33, 33, 0.8);
+    --color-title-control: rgba(33, 33, 33, 0.7);
+    --font-primary: 'Open Sans', sans-serif;
+    --border-radius: 3px;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -32,37 +38,43 @@ body {
 }
 
 header {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-primary);
     width: 100vw;
     padding: 1%;
     background-color: var(--color-header);
     text-align: center;
-    color: white;
+    color: var(--color-text);
 }
-h1{
+
+h1 {
     margin: 10px;
 }
-.container-buttons{
+
+.container-buttons {
     height: 36px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-i{
+
+i {
     font-size: 16px;
 }
-button{
+
+button {
     height: 36px;
+    display: flex;
     align-items: center;
     padding: 0 10px;
     font-size: 14px;
     border: none;
-    background-color: #191e2b;
-    color: white;
+    background-color: var(--color-header);
+    color: var(--color-text);
 }
 
-main{
+main {
     height: 100vh;
-    background-color: #30343f;
+    background-color: var(--color-background);
     display: flex;
     flex-direction: column;
 }
@@ -70,48 +82,42 @@ main{
 .container-meme {
     width: 50%;
     height: 60%;
-    margin: 20px auto; 
+    margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-    
 .canvas-meme {
     width: 60%;
     height: 100%;
 }
 
-p{
+p {
     width: 100%;
     font-family: Impact;
     font-size: 35px;
-    /* padding: 14px, 50px; */
-    background-color: white;
+    background-color: var(--color-text);
     text-align: center;
 }
 
-.image-meme{
-
+.image-meme {
     height: 90%;
     background-color: black;
-
 }
 
-.button-download{
+.button-download {
     width: 20%;
-    margin: 20px auto; 
+    margin: 20px auto;
     margin-top: 80px;
-    justify-content: center;;
+    justify-content: center;
     align-items: center;
     padding: 0 10px;
     font-size: 16px;
     border: none;
     background-color: green;
-    color: white;
-    
-
+    color: var(--color-text);
 }
 
 .aside-image {
@@ -121,10 +127,10 @@ p{
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #252935; 
+    background-color: var(--color-panel);
     font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
-    color: white;
+    font-family: var(--font-primary);
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -136,20 +142,20 @@ p{
     z-index: 10;
 }
 
-.section-panel{
+.section-panel {
     padding: 20px;
 }
 
-/* Asegúrate de que los elementos dentro del aside ocupen el 100% del width */
-.fondo-image, .fondo-aside-panel {
+.fondo-image,
+.fondo-aside-panel {
     width: 100%;
 }
 
-/* Ajusta el ancho de los sliders de acuerdo con tus preferencias */
 input[type="range"] {
     width: 100%;
 }
-.aside-close-button{
+
+.aside-close-button {
     position: fixed;
     top: 15px;
     right: 15px;
@@ -157,54 +163,36 @@ input[type="range"] {
     cursor: pointer;
 }
 
-.fondo-centrar{
+.fondo-centrar {
     display: flex;
     justify-content: space-between;
     margin: 1px;
     align-items: center;
-    width: 100%; 
+    width: 100%;
 }
-.aside-input-color{
+
+.aside-input-color {
     width: 50%;
 }
 
-/* 
-
-fondo-row input[type="color" ],
-.fondo-row select {
-    position: relative;
-    height: 36px;
-    display: flex;
-    flex: 1;
-    width: 100%; 
-    padding: 8px; 
-    box-sizing: border-box; 
-} 
-span{
-    position: absolute;
-    font-size: medium;
-    color: #191e2b;
-    margin-left: -50px; 
-}
- .input-color.prefix{
-    prefix: 50%;
- } */
-h3{
+h3 {
     font-size: 0.7rem;
 }
 
-
+.oculto {
+    display: none;
+}
 
 .button:hover {
-    background-color:#30343f; 
-    color:white; 
-    transform: scale(1.1); 
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transform: scale(1.1);
     border-radius: 5%;
 }
-.button-download:hover {
-    background-color: rgb(12, 78, 12); 
-    color:white; 
-    transform: scale(1.1); 
-    border-radius: 5%;
 
-} 
+.button-download:hover {
+    background-color: rgb(12, 78, 12);
+    color: var(--color-text);
+    transform: scale(1.1);
+    border-radius: 5%;
+}
