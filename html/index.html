@@ -35,7 +35,7 @@
     </header>
     <main>
       <div class="container-meme">
-        <div class="canvas-meme">
+        <div class="canvas-meme" id="canvas-meme">
           <p id="top-text">TOP TEXT</p>
           <div class="image-meme" id="image-meme"></div>
           <p id="bottom-text">BOTTOM TEXT</p>
@@ -134,7 +134,7 @@
           <div class="aside-container">
             <h3>SUPERIOR</h3>
             <textarea id="top-text-input">TOP TEXT</textarea>
-            <div>
+            <div class="aside-flex">
               <input type="checkbox" id="no-top-text-checkbox">
               <label for="no-top-text-checkbox">Sin texto superior</label>
             </div>
@@ -142,7 +142,7 @@
           <div class="aside-container">
             <h3>INFERIOR</h3>
             <textarea id="bottom-text-input">BOTTOM TEXT</textarea>
-            <div>
+            <div class="aside-flex">
               <input type="checkbox" id="no-bottom-text-checkbox">
               <label for="no-bottom-text-checkbox">Sin texto inferior</label>
             </div>
@@ -164,16 +164,16 @@
             </select>
             <div class="aside-flex">
               <!-- Tamaño -->
-              <input type="number" id="font-size-input">
+              <input type="number" id="font-size-input"> 
               <!-- Alineacion -->
               <div class="buttons-alignment">
-                <button class="balignment">
+                <button class="balignment" id="text-left-align">
                   <i></i>
                 </button>
-                <button class="balignment">
+                <button class="balignment" id="text-center-align">
                   <i></i>
                 </button>
-                <button class="balignment">
+                <button class="balignment" id="text-right-align">
                   <i></i>
                 </button>
               </div>    
@@ -187,8 +187,8 @@
               <div>
                 <h3>COLOR</h3>
                 <div>
-                  <input type="color" id="text-color-input">
-                  <span>#000000</span>
+                  <input type="color" id="text-color-input"> 
+                  <span id="text-color">#000000</span>
                 </div>
               </div>
               <!-- Color Fondo -->
@@ -196,12 +196,12 @@
                 <h3>FONDO</h3>
                 <div>
                   <input type="color" id="background-color-input">
-                  <span>#ffffff</span>
+                  <span id="text-background-color">#ffffff</span>
                 </div>
               </div>
             </div>
             <div class="aside-flex">
-              <input type="checkbox" id="text-no-background-checkbox">
+              <input type="checkbox" id="text-no-background-checkbox"> 
               <label for="text-no-background-checkbox">Fondo transparente</label>
             </div>
           </div> 
@@ -209,9 +209,9 @@
           <div class="aside-container">
             <h3>CONTORNO</h3>
             <div class="buttons-flex">
-              <button>Ninguno</button>
-              <button>Claro</button>
-              <button>Oscuro</button>
+              <button id="no-outline-button">Ninguno</button>
+              <button id="light-outline-button">Claro</button>
+              <button id="dark-outline-button">Oscuro</button>
             </div>
           </div>
           <!-- Padding -->
@@ -222,7 +222,7 @@
           <!-- Alto delinea -->
           <div class="aside-container">
             <h3>INTERLINEADO</h3>
-            <select name="line-height" id="line-height-select">
+            <select name="line-height" id="line-height-select"> 
               <option value="0.8">0.8</option>
               <option value="1">1</option>
               <option value="1.2">1.2</option>
@@ -234,6 +234,7 @@
         </section>
       </section>
     </aside>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
     <script src="/js/main.js"></script>
   </body>
 </html>

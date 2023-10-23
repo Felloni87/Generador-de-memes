@@ -109,7 +109,7 @@ const actualizarTamanioTexto = () => {
 }
 
 const actualizarFuente = () => {
-  const fuente = $('text-font-select').value
+  const fuente = $('font-select').value
   $('top-text').style.fontFamily = fuente
   $('bottom-text').style.fontFamily = fuente
 }
@@ -124,7 +124,7 @@ const actualizarColorTexto = () => {
 
 const actualizarFondoTexto = () => {
   if (!$('text-no-background-checkbox').checked) {
-    const color = $('text-background-color-input').value
+    const color = $('blend-mode-color-input').value
 
     $('text-background-color').innerText = color.toUpperCase()
     $('top-text').style.backgroundColor = color
@@ -188,7 +188,7 @@ const ajustarTexto = () => {
   const tamanioTexto = Math.round((window.innerWidth / 10) * 0.5)
   const padding = Math.round((window.innerWidth / 10) * 0.2)
 
-  $('text-size-input').value = tamanioTexto
+  $('font-size-input').value = tamanioTexto
   $('padding-input').value = padding
 }
   // Paneles
@@ -240,20 +240,20 @@ const inicializarTexto = () => {
   $('no-top-text-checkbox').addEventListener('change', alternarTextos)
   $('no-bottom-text-checkbox').addEventListener('change', alternarTextos)
 
-  $('text-font-select').addEventListener('change', actualizarFuente)
-  $('text-size-input').addEventListener('input', actualizarTamanioTexto)
-  $('text-left-align-button').addEventListener('click', () =>
+  $('font-select').addEventListener('change', actualizarFuente)
+  $('font-size-input').addEventListener('input', actualizarTamanioTexto)
+  $('text-left-align').addEventListener('click', () =>
     alinearTexto('left')
   )
-  $('text-center-align-button').addEventListener('click', () =>
+  $('text-center-align').addEventListener('click', () =>
     alinearTexto('center')
   )
-  $('text-right-align-button').addEventListener('click', () =>
+  $('text-right-align').addEventListener('click', () =>
     alinearTexto('right')
   )
 
   $('text-color-input').addEventListener('input', actualizarColorTexto)
-  $('text-background-color-input').addEventListener(
+  $('text-color-input').addEventListener(
     'input',
     actualizarFondoTexto
   )
@@ -276,7 +276,7 @@ const inicializarTexto = () => {
 
   $('padding-input').addEventListener('input', actualizarEspaciado)
 
-  $('line-height-input').addEventListener('change', actualizarInterlineado)
+  $('line-height-select').addEventListener('change', actualizarInterlineado)
 
   window.addEventListener('resize', ajustarTexto)
 }
@@ -320,7 +320,7 @@ const inicializarValoresDefault = () => {
     inicializarTexto()
     inicializarValoresDefault()
   
-    $('download-meme-button').addEventListener('click', descargarMeme)
+    $('download-button').addEventListener('click', descargarMeme)
   }
   
   window.onload = inicializar
