@@ -3,7 +3,7 @@ const $ = (id) => document.getElementById(id)
 
 const descargarMeme = () => {
   domtoimage.toBlob($('canvas-meme')).then(function (blob) {
-    saveAs(blob, 'mi-meme.png')
+    saveAs(blob, 'meme.png')
   })
 }
 
@@ -102,7 +102,7 @@ const alinearTexto = (alineacion) => {
 }
 
 const actualizarTamanioTexto = () => {
-  const tamanio = $('text-size-input').value
+  const tamanio = $('font-size-input').value
 
   $('top-text').style.fontSize = `${tamanio}px`
   $('bottom-text').style.fontSize = `${tamanio}px`
@@ -175,7 +175,7 @@ const actualizarEspaciado = () => {
 }
 
 const actualizarInterlineado = () => {
-  const lineHeight = $('line-height-input').value
+  const lineHeight = $('line-height-select').value
   $('top-text').style.lineHeight = lineHeight
   $('bottom-text').style.lineHeight = lineHeight
 }
