@@ -204,11 +204,11 @@ const ajustarTexto = () => {
  
  const mostrarPanelImagen = () => {
    $('aside-text').classList.add('oculto')
-   $('aside-image').classList.remove('oculto')
+   $('panel-img').classList.remove('oculto')
  }
  
  const mostrarPanelTexto = () => {
-   $('aside-image').classList.add('oculto')
+   $('panel-img').classList.add('oculto')
    $('aside-text').classList.remove('oculto')
  }
  

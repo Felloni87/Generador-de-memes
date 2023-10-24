@@ -125,23 +125,6 @@ label {
     padding: 0 20px;
   }
   
- /* .aside {
-    width: 260px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: var(--color-panel);
-    padding: 30px 15px;
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
-    z-index: auto;
-  } */
-
-
   .button {
     height: 36px;
     display: flex;
@@ -169,21 +152,21 @@ label {
     margin-right: 5px;
     display: block;
   }
-  .buttons-container {
+  .container-buttons {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 5px;
   }
   
-  .buttons-container .button {
+  .container-buttons .button {
     margin: 2.5px;
   }
   
-  .buttons-container .button:first-child {
+  .container-buttons .button:first-child {
     margin-left: 0;
   }
   
-  .buttons-container .button:last-child {
+  .container-buttons .button:last-child {
     margin-right: 0;
   }
   
@@ -213,14 +196,14 @@ label {
   box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
   z-index: 10;
 } 
-  .aside-title{
+  /* .aside-title{
     color: var(--color-title-panel);
     margin-top: 0; 
     margin-bottom: 20px;
     width: 100%;
     font-size: 18px;
     text-align: center;
-  }
+  } */
   
   .aside-close-button{
     position: fixed;
@@ -229,7 +212,7 @@ label {
     border-radius: 3px;
     cursor: pointer;
   }
-  
+   
   .aside-close-button:focus,
   .aside-close-button:hover {
     background-color: var(--color-boton-default-hover);
@@ -360,13 +343,13 @@ label {
     justify-content: center;
   }
   
-  /* #top-text {
+   #top-text {
     top: 0;
-  } */
+  } 
   
-  /* #bottom-text {
+  #bottom-text {
     bottom: 0;
-  } */
+  } 
   
   #font-size-input{
     width: calc(50% - 2.5px);
@@ -379,9 +362,9 @@ label {
     background-size: cover;
   }
   
-  /* #default-filters-button {
+   #default-filters-button {
     margin-top: 30px;
-  } */
+  } 
   
   #download-button{
     margin-top: 80px;
@@ -415,28 +398,7 @@ label {
   .aside-flex {
     display: flex;
     align-items: center;
-  }
-  
-   @media (min-width: 1300px) {
-    .aside {
-      display: block;
-      box-shadow: none;
-    }
-    .aside-close-button {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 700px) {
-    h1{
-      font-size: 26px;
-    }
-    .aside {
-      width: 100%;
-    }
   }  
-  
-  
   header {
     font-family: var(--font-primary);
     width: 100vw;
@@ -446,12 +408,12 @@ label {
     color: var(--color-text);
 }  
 
-.container-buttons {
+ .buttons-flex {
   height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
 
 main {
   height: 90vh;
@@ -487,9 +449,35 @@ p {
     background-color: green;
     color: var(--color-text);
 }
-i {
-  font-size: 16px;
+
+@media (min-width: 1300px) {
+  .aside {
+    display: block;
+    box-shadow: none;
+  }
+  .aside-close-button {
+    display: none;
+  }
 }
+
+@media (max-width: 700px) {
+  h1{
+    font-size: 26px;
+  }
+  .aside {
+    width: 100%;
+  }
+}  
+/* i {
+  font-size: 16px;
+} */
+/* .aside-close-button {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+} */
 
  /* .section-panel{
   flex-direction: column;
