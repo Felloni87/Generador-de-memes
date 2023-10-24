@@ -35,35 +35,33 @@
         </button> 
       </div>
     </header>
-    <div class="container-meme editor-container">
+    <div class="editor-container">
     <main class="meme-container">
-      <div class="meme">
+    
         <div class="canvas-meme" id="canvas-meme">
           <p id="top-text" class="text-meme ">TOP TEXT</p>
           <div src="" alt="" class="image-meme" id="image-meme"></div>
           <p id="bottom-text" class="text-meme ">BOTTOM TEXT</p>
         </div>
-      </div>
+    
       <button type="button" class="button button-download button-text" id="download-button">
         <i class="fas fa-download button-icon-text "></i>
         Descargar meme
       </button>
     </main>
 
-    <!-- ASIDE IMAGE -->
+    // ASIDE IMAGE 
 
     <aside class="panel oculto" id="aside"> 
       <button class=" button aside-close-button" id="aside-close-button">
         <i class="fas fa-times"></i>
       </button>
-
       <section class="panel-img " id="panel-img">
         <h2 class="aside-title">IMAGEN</h2>
         <div class="url-image aside-container">
           <h3>URL</h3>
           <input type="text" class="control-input" id="url-img-input"> 
         </div>
-
         <div class="fondo-image aside-container">
           <h3>FONDO</h3>
           <div class="fondo-centrar">    
@@ -71,7 +69,6 @@
               <input class="input-color" id="blend-mode-color-input" type="color" value="#ffffff">
               <span id="blend-mode-color">#ffffff</span>
             </div>
-
             <div class="fondo-image-panel control-column" >
               <select class="fondo-row panel-control-input" name="" id="blend-mode-select">
                 <option value="unset">Ninguno</option>
@@ -129,9 +126,9 @@
         <button class="button button-default" id="default-filters-button">Reestablecer filtros</button>
       </section>
         
-      <!-- aside Texto -->
+      <!-- Aside Texto -->
 
-      <section class="panel aside-text section-panel" id="aside-text">
+      <section class="panel aside-text oculto section-panel" id="aside-text">
         <section>
           <h2 class="aside-title">TEXTO</h2>
           <div class="aside-container ">

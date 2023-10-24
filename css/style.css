@@ -116,6 +116,7 @@ label {
   }
   
   .meme-container {
+    height: 75%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -196,15 +197,6 @@ label {
   box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
   z-index: 10;
 } 
-  /* .aside-title{
-    color: var(--color-title-panel);
-    margin-top: 0; 
-    margin-bottom: 20px;
-    width: 100%;
-    font-size: 18px;
-    text-align: center;
-  } */
-  
   .aside-close-button{
     position: fixed;
     top: 15px;
@@ -318,15 +310,15 @@ label {
     letter-spacing: -1px;
   }
   
-  .meme{
-    width: 100%;
-    max-width: 610px;
-    height: 60%;
-    background-color: black;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
+  .canvas-meme{
+  width: 100%;
+  max-width: 610px;
+  height: 610px;
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
   
   .text-meme {
     width: 100%;
@@ -415,29 +407,17 @@ label {
   align-items: center;
 } 
 
-main {
-  height: 90vh;
-  background-color: var(--color-background);
+.container-meme {
   display: flex;
-  flex-direction: column;
-}
-
-p {
-  width: 100%;
-  font-family: Impact;
-  font-size: 35px;
-  background-color: var(--color-text);
-  text-align: center;
+  flex-grow: 1;
 }
 
 .image-meme {
   height: 50%;
   background-color: black;
-}
-  .canvas-meme{
-    height: 50%;
-  }
-  .button-download {
+} 
+
+.button-download {
     width: 20%;
     margin: 20px auto;
     margin-top: 80px;
@@ -468,191 +448,3 @@ p {
     width: 100%;
   }
 }  
-/* i {
-  font-size: 16px;
-} */
-/* .aside-close-button {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  border-radius: 3px;
-  cursor: pointer;
-} */
-
- /* .section-panel{
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-}  */
-
-
- /* h1 {
-    margin: 10px;
-} */
-/* 
-.container-buttons {
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-i {
-    font-size: 16px;
-}
-
-button {
-    height: 36px;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    font-size: 14px;
-    border: none;
-    background-color: var(--color-header);
-    color: var(--color-text);
-}
-
-main {
-    height: 100vh;
-    background-color: var(--color-background);
-    display: flex;
-    flex-direction: column;
-}
-
-.container-meme {
-    width: 50%;
-    height: 60%;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.canvas-meme {
-    width: 60%;
-    height: 100%;
-}
-
-p {
-    width: 100%;
-    font-family: Impact;
-    font-size: 35px;
-    background-color: var(--color-text);
-    text-align: center;
-}
-
-.image-meme {
-    height: 90%;
-    background-color: black;
-}
-
-.button-download {
-    width: 20%;
-    margin: 20px auto;
-    margin-top: 80px;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
-    font-size: 16px;
-    border: none;
-    background-color: green;
-    color: var(--color-text);
-}
-
-.aside-image {
-    width: 20%;
-    height: 100vh;
-    padding: 30px 15px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: var(--color-panel);
-    font-size: 18px;
-    font-family: var(--font-primary);
-    color: var(--color-text);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-}
-
-.section-panel {
-    padding: 20px;
-}
-
-.fondo-image,
-.fondo-aside-panel {
-    width: 100%;
-}
-
-input[type="range"] {
-    width: 100%;
-}
-
-.aside-close-button {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.fondo-centrar {
-    display: flex;
-    justify-content: space-between;
-    margin: 1px;
-    align-items: center;
-    width: 100%;
-}
-
-.aside-input-color {
-    width: 50%;
-}
-
-
-.aside-flex {
-    display: flex;
-    align-items: center;
-  }
-
-.aside-text{
-    width: 20%;
-    height: 100vh;
-    padding: 30px 15px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: var(--color-panel);
-    font-size: 18px;
-    font-family: var(--font-primary);
-    color: var(--color-text);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-}
-
-.button:hover {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    transform: scale(1.1);
-    border-radius: 5%;
-}
-
-.button-download:hover {
-    background-color: rgb(12, 78, 12);
-    color: var(--color-text);
-    transform: scale(1.1);
-    border-radius: 5%;
-} */ 
